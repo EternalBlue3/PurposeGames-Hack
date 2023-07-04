@@ -8,4 +8,4 @@ You can utilize these javascript programs on https://www.purposegames.com.
 
 Python folder explanation:
 
-The "main.py" program utilizes requests to interact with purposegames.com in order to falsify scores. The program uses a myriad of different rules to appear human. The quizzes located in "quizzes.txt" were found with the program "Scraper.py." This program uses bs4 and requests to get information from the website, and threading to speed up to process. If you wish to use the program make sure to replace the cookies located in "PurposeGames.py" with your own.
+The "main.py" program utilizes requests to interact with purposegames.com in order to falsify scores. The program uses a myriad of different rules to appear human. The quizzes located in "quizzes.txt" were found with the program "Scraper.py." This program uses bs4 and requests to get information from the website, and threading to speed up to process. If you wish to use the program, make sure to replace the cookies located in "PurposeGames.py" with your own.
