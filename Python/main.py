@@ -28,7 +28,7 @@ def obfuscate_results(url):
         print(f"Time: {faketime}")
         print(f"Accuracy: {fakeacc}\n")
         submit_quiz_results(url, faketime, fakeacc, gameid, tid, token, nonce, csrf)
-        time.sleep(30)
+        time.sleep(faketime+5)
     
     if num_questions >= 11 and num_questions < 25:
         correct_guesses = random.randint(1,num_questions-5)
@@ -40,7 +40,7 @@ def obfuscate_results(url):
         print(f"Time: {faketime}")
         print(f"Accuracy: {fakeacc}\n")
         submit_quiz_results(url, faketime, fakeacc, gameid, tid, token, nonce, csrf)
-        time.sleep(30)
+        time.sleep(faketime+5)
             
     if num_questions >= 25:
         for x in range(2):
@@ -53,7 +53,7 @@ def obfuscate_results(url):
             print(f"Time: {faketime}")
             print(f"Accuracy: {fakeacc}\n")
             submit_quiz_results(url, faketime, fakeacc, gameid, tid, token, nonce, csrf)
-            time.sleep(30)
+            time.sleep(faketime+5)
             
     # Submit final quiz results
     print(f"Finalizing time of {str(finaltime)}.\n\n")
@@ -70,7 +70,7 @@ if __name__ == '__main__':
         try:
             obfuscate_results(quiz)
             quizzes_played += 1
-            time.sleep(30) # Add delay between playing quizzes
+            time.sleep(20) # Add delay between playing quizzes
         except KeyboardInterrupt:
             # Remove quizzes the program has already played on exit
             links = links[quizzes_played:]
