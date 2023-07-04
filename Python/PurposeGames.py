@@ -76,7 +76,7 @@ def get_quiz_info(url):
         reasonable_time = round(sum(top_three_parsed) / 3, 1) # Take average of top 3 times and round to the nearest tenth
         
         if reasonable_time > top_three_parsed[0]+10: # Check if there is an outlier
-            reasonable_time = top_three_parsed[0] + round(random.uniform(0.5,2.5),1) # Round number to the tenth
+            reasonable_time = round(top_three_parsed[0] + random.uniform(0.5,2.5),1) # Round number to the tenth
         
         reasonable_time = int(str(reasonable_time).replace('.','')) # Convert to game format
     else: # If there is not enough player completions, base time off the estimated time at the top of the quiz
